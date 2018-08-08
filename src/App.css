@@ -1,0 +1,160 @@
+* {
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline: 4px dashed rgb(255, 230, 0);
+  -webkit-transition: outline 0.26s ease-in-out;
+  transition: outline 0.26s ease-in-out;
+}
+
+html,
+body {
+  margin: 0;
+}
+
+body {
+  font-family: "Robot", sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.top {
+  width: 100vw;
+  height: 7vh;
+  background: rgb(44, 44, 44);
+  text-align: center;
+  margin: 0;
+}
+.top h1 {
+  font-size: 1.3em;
+  color: white;
+  font-weight: 400;
+}
+
+.nav {
+  width: 30vw;
+  height: 100vh;
+  background: rgb(68, 68, 68);
+  color: white;
+  padding: 20px 5px 10px 16px;
+}
+
+#map {
+  width: 70vw;
+  background: rgb(231, 231, 231);
+  height: 93vh;
+  overflow: hidden;
+}
+
+.burger {
+  display: none;
+}
+
+.hide {
+  display: none;
+}
+
+.credit {
+  font-size: 0.8em;
+  color: rgb(231, 231, 231);
+  font-style: italic;
+  text-align: center;
+  padding-bottom: 6px;
+}
+
+.search-input {
+  font-size: 1em;
+  padding: 4px 10px 4px 10px;
+  height: 36px;
+  margin-bottom: 16px;
+  border-radius: 6px;
+  width: 60%;
+  transition: width 0.3s ease-in-out;
+  -webkit-transition: width 0.3s ease-in-out;
+}
+
+.search-input:focus {
+  width: 92%;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+  padding: 12px 6px 12px 6px;
+  margin: 6px;
+  background: rgba(255, 207, 51, 0.788);
+  color: black;
+  width: 90%;
+}
+
+.window-open {
+  display: block;
+  width: 20vw;
+  background: linear-gradient(rgba(255, 222, 38, 0.8), rgba(194, 192, 66, 0.1));
+  padding: 6px 6px 20px 6px;
+}
+
+.window-open a {
+  padding: 6px;
+  color: rgb(56, 52, 0);
+  font-weight: 600;
+  font-size: 1.2em;
+}
+
+.window-open a:hover {
+  color: white;
+  background: rgb(48, 49, 0);
+  font-weight: 300;
+}
+
+.filtered-location {
+  cursor: pointer;
+}
+
+/* RESPONSIVE PART */
+@media screen and (max-width: 690px) {
+  .credit {
+    font-size: 0.9em;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .nav.pop {
+    display: block;
+    position: absolute;
+    top: 7vh;
+    z-index: 10;
+    width: 75%;
+    transition: 0.5s;
+  }
+
+  .burger {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 1em;
+    color: white;
+    cursor: pointer;
+  }
+
+  .map {
+    width: 100%;
+  }
+
+  .window-open {
+    width: 60vw;
+    font-size: 1.3em;
+  }
+}
